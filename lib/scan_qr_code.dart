@@ -11,6 +11,7 @@ class ScanQRCode extends StatefulWidget {
 
 class _ScanQRCodeState extends State<ScanQRCode> {
   String qrResult = "Scanned data will appear here";
+
   Future<void> scanQR()async{
   try{
     final qrCode = await FlutterBarcodeScanner.scanBarcode('#ff6666', 'Cancel', true, ScanMode.QR);
